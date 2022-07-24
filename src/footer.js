@@ -1,10 +1,11 @@
 import React from "react";
+import './App.css';
 
 
-class Footer{
+class Footer extends React.Component{
     render(){
         return(
-            <p>Fahad @copyright all rights reserved</p>
+            <p className="copyrights">Fahad @copyright all rights reserved</p>
         )
     }
 }

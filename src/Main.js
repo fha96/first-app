@@ -1,13 +1,19 @@
 import React from "react";
 import HornedBeast from "./hornedbeast";
 
-class Main{
+class Main extends React.Component{
     render(){
         return(
+            <>
             <div className="main-container">
-            <HornedBeast src="https://th.bing.com/th/id/OIP.iwMVNNNnRo3CyiycD6erfQHaKC?pid=ImgDet&rs=1" alt="pic1" title="pic1"/>
-            <HornedBeast src="https://th.bing.com/th/id/OIP.iwMVNNNnRo3CyiycD6erfQHaKC?pid=ImgDet&rs=1" alt="pic2" title="pic2" />
+            <HornedBeast title={'Cat'} link={'https://th.bing.com/th/id/OIP.JryFL8e2AIGQdJ5AO4NtLAHaG3?pid=ImgDet&rs=1'}
+            alt={'Cat image'} picTitle={'Cat'} discripe={'Cat is one of the most beatiful animals'} />
             </div>
+            <div className="main-container">
+            <HornedBeast title={'Dog'} link={'https://th.bing.com/th/id/R.bbad20c99d72b498452563e5612eb6dd?rik=EJF07hxvIwP0xQ&pid=ImgRaw&r=0'}
+            alt={'Dog image'} picTitle={'Dog'}  discripe={'Dogs are mostly used for guard purposes'}/>
+            </div>
+            </>
         )
     }
 }
