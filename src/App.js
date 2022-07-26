@@ -2,11 +2,20 @@ import './App.css';
 import Header from './header';
 import Footer from './footer';
 import Main from './Main';
-import NewCard from './bootstrapComp/card'
+import SelectedBeast from './bootstrapComp/SelectedBeast'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 
 
-function App() {
+class App extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state={
+      showValue: false
+    }
+  }
+  render(){
   return (
     <div className="App">
       <Header />
@@ -14,6 +23,7 @@ function App() {
       <Footer />
     </div>
   );
+}
 }
 
 export default App;
