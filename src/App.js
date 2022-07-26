@@ -7,15 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 
 
-class App extends React.Component {
-  constructor(props){
-    super(props);
+function App(){
 
-    this.state={
-      showValue: false
-    }
-  }
-  render(){
   return (
     <div className="App">
       <Header />
@@ -23,7 +16,6 @@ class App extends React.Component {
       <Footer />
     </div>
   );
-}
 }
 
 export default App;

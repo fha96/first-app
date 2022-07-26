@@ -2,7 +2,7 @@ import React from "react";
 
 import './App.css';
 import Card from 'react-bootstrap/Card';
-
+import SelectedBeast from "./bootstrapComp/SelectedBeast";
 
 class HornedBeast extends React.Component{
     constructor(props){
@@ -28,6 +28,7 @@ class HornedBeast extends React.Component{
                 {this.props.discripe}<br />
                 <span>&#128151; {this.state.clickCounter}</span>
                 </Card.Text>
+                <SelectedBeast src={this.props.link} description={this.props.discripe} />
             </Card.Body>
         </Card>
         
