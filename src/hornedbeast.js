@@ -11,7 +11,7 @@ class HornedBeast extends React.Component{
         this.state ={
             clickCounter:0
         }
-    }
+    }z
     //if we need to update the state we have to create method
     updateState = () =>{
         this.setState({clickCounter: this.state.clickCounter + 1})
@@ -28,7 +28,7 @@ class HornedBeast extends React.Component{
                 {this.props.discripe}<br />
                 <span>&#128151; {this.state.clickCounter}</span>
                 </Card.Text>
-                <SelectedBeast src={this.props.link} description={this.props.discripe} />
+                <SelectedBeast src={this.props.link} description={this.props.discripe} name={this.props.title}/>
             </Card.Body>
         </Card>
         

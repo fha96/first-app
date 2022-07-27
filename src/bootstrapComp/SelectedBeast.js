@@ -1,5 +1,4 @@
 import React from "react";
-import HornedBeast from "../hornedbeast";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -33,19 +32,17 @@ class SelectedBeast extends React.Component {
     
           <Modal show={this.state.showImage} onHide={this.handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+              <Modal.Title>{this.props.name}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <img className="modal-img" src={this.props.src} />
-                {/* <HornedBeast link={this.props.src}/> */}
                 <p>{this.props.description}</p>
-                {/* <HornedBeast discripe={this.props.description}/> */}
+            
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={this.handleClose}>
                 Close
               </Button>
-          
             </Modal.Footer>
           </Modal>
         </>
