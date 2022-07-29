@@ -32,12 +32,25 @@ handleClose=()=>{
     displayModal:false
   })
 }
+filterBeastByHornNumber=(e)=>{
+  const hornNumber=parseInt(e.target.value);
+  let filteredData=data;
+
+  if(hornNumber){
+    filteredData=data.filter(item=>item.horns===hornNumber);
+  }
+  console.log(filteredData);
+  this.setState({
+    allBeast:filteredData
+  })
+
+}
 
 render(){
   return (
     <div className="App">
       <Header />
-      <Main data={this.state.allBeast} showModal={this.showModal}/>
+      <Main data={this.state.allBeast} showModal={this.showModal} filterBeastByHornNumber={this.filterBeastByHornNumber}/>
       <SelectedBeast show={this.state.displayModal}  handleClose={this.handleClose} beastS={this.state.beastSelect} />
       <Footer />
     </div>
